@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  /* width: 75%; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+h6 {
+  text-align: left;
+}
+.header {
+  grid-column: 1 / span 2;
+  font-family: 'Mukta', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-start;
+  background: url("./assets/movies.jpg");
+  background-size: cover;
+  padding-left: 5%;
+  height: 150px;
+}
+
+.sidebar {
+  max-width: 300px;
+  width: 100%;
+  grid-column: 1;
+}
+
+.home {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-flow: column;
+}
+
+.movie-detail {
+  width: 85%;
+}
+
+.director-detail, .director-delete, .category-detail, .category-delete, .movie-detail, .movie-delete {
+  text-align: left;
+}
+
+.movie-detail-img {
+  width: 33%;
+  float: left;
+  margin-right: 25px
+
+}
+
+.carousel {
+  grid-column: 2;
+  margin-top: 5px;
+}
+
+.stats {
+  grid-column: 1;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: 100px;
+}
+
+.movie-thumb {
+  width: 100px;
+  float: left
+}
+
+.card {
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+}
