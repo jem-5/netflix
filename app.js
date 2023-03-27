@@ -49,7 +49,7 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 console.log(PORT);
 app.listen(PORT);
 
