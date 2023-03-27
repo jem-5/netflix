@@ -43,6 +43,7 @@ app.use(function (err, req, res, next) {
 });
 
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", true);
 const mongoDB = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.d2lawdi.mongodb.net/jenflix?retryWrites=true&w=majority`;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
