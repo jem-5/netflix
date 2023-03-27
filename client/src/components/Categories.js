@@ -17,7 +17,7 @@ const Categories = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/catalog/categories")
+      .get("/catalog/categories")
       .then((response) => {
         setCategories(response.data);
       })
@@ -26,7 +26,7 @@ const Categories = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/catalog/movies")
+      .get("/catalog/movies")
       .then((response) => {
         setMovies(response.data);
       })

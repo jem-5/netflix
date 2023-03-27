@@ -16,7 +16,7 @@ const Movies = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/catalog/movies")
+      .get("/catalog/movies")
       .then((response) => {
         setMovies(response.data);
       })

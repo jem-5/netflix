@@ -18,7 +18,7 @@ const CategoryCreate = () => {
 
   const handleAdd = (e) => {
     axios
-      .post("http://localhost:3000/catalog/category/create", { name: category })
+      .post("/catalog/category/create", { name: category })
       .then((resp) => {
         console.log(resp.data);
       })
@@ -30,7 +30,7 @@ const CategoryCreate = () => {
 
   const handleUpdate = () => {
     axios
-      .post(`http://localhost:3000/catalog/category/${id}/update`, {
+      .post(`/catalog/category/${id}/update`, {
         name: category,
       })
       .then((resp) => {
@@ -42,7 +42,7 @@ const CategoryCreate = () => {
   useEffect(() => {
     if (id !== undefined) {
       axios
-        .get(`http://localhost:3000/catalog/category/${id}`)
+        .get(`/catalog/category/${id}`)
         .then((res) => {
           setCategory(res.data.category.name);
           setUpdateMode(true);

@@ -26,7 +26,7 @@ const Home = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    axios("http://localhost:3000/")
+    axios("/catalog")
       .then((response) => {
         setTitles(response.data.movie_count);
         setCategories(response.data.category_count);

@@ -22,7 +22,7 @@ const DirectorDelete = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/catalog/director/${id.id}/delete`)
+      .get(`/catalog/director/${id.id}/delete`)
       .then((resp) => {
         console.log(resp.data);
         setDirector(resp.data.director.name);
@@ -37,7 +37,7 @@ const DirectorDelete = () => {
 
   const deleteDirector = () => {
     axios
-      .post(`http://localhost:3000/catalog/director/${id.id}/delete`, id.id)
+      .post(`/catalog/director/${id.id}/delete`, id.id)
       .then((resp) => {
         console.log(resp.data);
       })

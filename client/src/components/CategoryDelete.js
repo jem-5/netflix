@@ -21,7 +21,7 @@ const CategoryDelete = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/catalog/category/${id.id}/delete`)
+      .get(`/catalog/category/${id.id}/delete`)
       .then((resp) => {
         console.log(resp.data);
         setCategory(resp.data.category.name);
@@ -34,7 +34,7 @@ const CategoryDelete = () => {
 
   const deleteCategory = () => {
     axios
-      .post(`http://localhost:3000/catalog/category/${id.id}/delete`, id.id)
+      .post(`/catalog/category/${id.id}/delete`, id.id)
       .then((resp) => console.log(resp.data))
       .catch((err) => console.log(err.data));
   };

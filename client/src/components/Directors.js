@@ -17,7 +17,7 @@ const Directors = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/catalog/directors")
+      .get("/catalog/directors")
       .then((response) => {
         setDirectors(response.data);
       })
@@ -26,7 +26,7 @@ const Directors = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/catalog/movies")
+      .get("/catalog/movies")
       .then((response) => {
         setMovies(response.data);
       })

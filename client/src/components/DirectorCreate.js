@@ -17,7 +17,7 @@ const DirectorCreate = () => {
 
   const handleAdd = (e) => {
     axios
-      .post("http://localhost:3000/catalog/director/create", { name: director })
+      .post("/catalog/director/create", { name: director })
       .then((resp) => {
         console.log(resp.data);
         console.log("Success");
@@ -30,7 +30,7 @@ const DirectorCreate = () => {
 
   const handleUpdate = () => {
     axios
-      .post(`http://localhost:3000/catalog/director/${id}/update`, {
+      .post(`/catalog/director/${id}/update`, {
         name: director,
       })
       .then((resp) => console.log(resp.data))
@@ -40,7 +40,7 @@ const DirectorCreate = () => {
   useEffect(() => {
     if (id !== undefined) {
       axios
-        .get(`http://localhost:3000/catalog/director/${id}`)
+        .get(`/catalog/director/${id}`)
         .then((res) => {
           setDirector(res.data.director.name);
           setUpdateMode(true);

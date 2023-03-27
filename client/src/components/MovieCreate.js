@@ -38,7 +38,7 @@ const MovieCreate = () => {
     console.log(id);
     if (id !== undefined) {
       axios
-        .get(`http://localhost:3000/catalog/movie/${id}`)
+        .get(`/catalog/movie/${id}`)
         .then((resp) => {
           console.log(resp.data);
           setMovie(resp.data);
@@ -58,7 +58,7 @@ const MovieCreate = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/catalog/movie/create")
+      .get("/catalog/movie/create")
       .then((res) => {
         setCategories(res.data.categories);
         setDirectors(res.data.directors);
@@ -72,7 +72,7 @@ const MovieCreate = () => {
   const handleAdd = (e) => {
     console.log(movie);
     axios
-      .post("http://localhost:3000/catalog/movie/create", {
+      .post("/catalog/movie/create", {
         title: title,
         director: director,
         summary: summary,
@@ -94,7 +94,7 @@ const MovieCreate = () => {
   const handleUpdate = () => {
     console.log("UPDATE");
     axios
-      .post(`http://localhost:3000/catalog/movie/${id}/update`, {
+      .post(`/catalog/movie/${id}/update`, {
         title: title,
         director: director,
         summary: summary,

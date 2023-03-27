@@ -11,14 +11,14 @@ const MovieDelete = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/catalog/movie/${id.id}/delete`)
+      .get(`/catalog/movie/${id.id}/delete`)
       .then((resp) => setMovie(resp.data.title))
       .catch((err) => console.log(err));
   }, [id.id]);
 
   const deleteMovie = () => {
     axios
-      .post(`http://localhost:3000/catalog/movie/${id.id}/delete`)
+      .post(`/catalog/movie/${id.id}/delete`)
       .then((resp) => console.log(resp))
       .catch((err) => console.log(err));
   };

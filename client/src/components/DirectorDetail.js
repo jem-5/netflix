@@ -22,7 +22,7 @@ const DirectorDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/catalog/director/${id.id}`)
+      .get(`/catalog/director/${id.id}`)
       .then((response) => {
         setDirector(response.data.director.name);
         setDirectorMovies(response.data.director_movies);

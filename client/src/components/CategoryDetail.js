@@ -23,7 +23,7 @@ const CategoryDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/catalog/category/${id.id}`)
+      .get(`/catalog/category/${id.id}`)
       .then((response) => {
         console.log(response.data.category_movies);
         setCategory(response.data.category.name);

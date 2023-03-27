@@ -17,7 +17,7 @@ const MovieDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/catalog/movie/${id.id}`)
+      .get(`/catalog/movie/${id.id}`)
       .then((response) => {
         setMovie(response.data);
       })
@@ -28,7 +28,7 @@ const MovieDetail = () => {
   useEffect(() => {
     if (movie.length !== 0) {
       axios
-        .get(`http://localhost:3000/catalog/director/${movie.director}`)
+        .get(`/catalog/director/${movie.director}`)
         .then((response) => {
           setDirector(response.data.director.name);
         })
