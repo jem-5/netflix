@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Movies from "./components/Movies";
 import Directors from "./components/Directors";
@@ -22,7 +22,7 @@ const App = () => {
     <div className="App">
       <Header title="JENFLIX" />
       <Sidebar />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
@@ -42,7 +42,7 @@ const App = () => {
           <Route path="/director/:id/update" element={<DirectorCreate />} />
           <Route path="/movie/:id/update" element={<MovieCreate />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
