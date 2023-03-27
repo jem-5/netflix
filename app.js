@@ -50,6 +50,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
+console.log(PORT);
+app.listen(PORT);
 
 module.exports = app;
