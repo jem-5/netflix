@@ -28,6 +28,7 @@ const Home = () => {
   useEffect(() => {
     axios("/catalog")
       .then((response) => {
+        console.log(response.data);
         setTitles(response.data.movie_count);
         setCategories(response.data.category_count);
         setDirectors(response.data.director_count);
