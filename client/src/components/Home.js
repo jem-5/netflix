@@ -46,8 +46,6 @@ const Home = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(images);
-
   return (
     <div className="home">
       <Carousel
