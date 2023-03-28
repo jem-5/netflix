@@ -39,7 +39,7 @@ const MovieDetail = () => {
   useEffect(() => {
     if (movie.length !== 0) {
       axios
-        .get(`http://localhost:3000/catalog/category/${movie.category}`)
+        .get(`/catalog/category/${movie.category}`)
         .then((response) => {
           setCategory(response.data.category.name);
         })

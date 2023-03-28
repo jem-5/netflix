@@ -28,16 +28,15 @@ const Home = () => {
   useEffect(() => {
     axios("/catalog")
       .then((response) => {
-        console.log(response.data);
         setTitles(response.data.movie_count);
         setCategories(response.data.category_count);
         setDirectors(response.data.director_count);
-        setCopies(
-          response.data.movie_available_count.reduce(
-            (prev, curr) => prev + curr.stock,
-            0
-          )
-        );
+        // setCopies(
+        //   response.data.movie_available_count.reduce(
+        //     (prev, curr) => prev + curr.stock,
+        //     0
+        //   )
+        // );
         setImages(
           response.data.movie_available_count.map(function (mov) {
             return mov.img;
